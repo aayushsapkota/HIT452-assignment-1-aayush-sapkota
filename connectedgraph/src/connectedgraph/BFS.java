@@ -19,7 +19,7 @@ public class BFS {
     queue = new LinkedList<Integer>();
     }
     
-    public void breadthFristSearch(int adj_matrix[][], int origin){
+    public String breadthFristSearch(int adj_matrix[][], int origin){
     
         int numberOfNode = adj_matrixlength(adj_matrix, origin);
         
@@ -50,11 +50,12 @@ public class BFS {
         }
         
         if(isConnected){
-            System.out.println("The graph given is connected.");  
+            return "Graph is connected";  
         }else{
-            System.out.println("The graph given is disconnected.");
+            return "Graph is not connected";  
         }
         }   
+        return null;
     }
     
     
